@@ -14,9 +14,10 @@ for i in range(0,30):
 print(list)"""
 list = [0,1]
 def fibArray(list , num):
+    ret_list = list
     if num >= 2:
-        list[num] = list[num-1] + list[num-2]
-
-    return list
-ret = fibArray(list , 2)
+        for i in range(2, num):
+            ret_list.append(list[i - 1] + list[i -2])
+    return ret_list
+ret = fibArray(list , 100)
 print(ret)
